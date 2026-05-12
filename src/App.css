@@ -56,6 +56,108 @@
   }
 }
 
+.app-container {
+  padding: 28px 20px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.home-page {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.train-card + .train-card { margin-top: 14px; }
+
+/* Global button styles */
+button {
+  font-family: var(--sans);
+}
+
+/* Improve link visibility */
+a { color: var(--primary); text-decoration: none; }
+
+@media (max-width: 720px) {
+  .app-container { padding: 18px 12px; }
+}
+
+/* Floating back button that follows the user on the right */
+.floating-back {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 9999;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, var(--accent), #6e3bff);
+  color: var(--primary-contrast);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(108,46,255,0.18);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  min-width: 56px;
+}
+
+.floating-back:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(108,46,255,0.22); }
+.floating-back:focus { outline: 3px solid rgba(192,132,252,0.18); outline-offset: 3px; }
+
+@media (max-width: 480px) {
+  .floating-back { right: 12px; bottom: 16px; padding: 10px 12px; }
+}
+
+/* Booking page container for consistent alignment */
+.booking-page {
+  padding: 20px;
+  max-width: 820px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.booking-page h2 {
+  color: var(--text-h);
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+/* Main title on home page */
+.main-title {
+  display: inline-block;
+  padding: 18px 36px;
+  margin: 28px auto;
+  font-size: clamp(28px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary-contrast);
+  background: linear-gradient(90deg, rgba(106,58,255,0.14), rgba(3,169,244,0.08));
+  border-radius: 14px;
+  box-shadow: 0 14px 48px rgba(2,6,23,0.55);
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: none;
+  border: 1px solid rgba(255,255,255,0.04);
+  text-shadow: 0 4px 14px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* Optional accent variant: gradient text */
+.main-title.gradient-text {
+  background: none;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--accent), #6e3bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  box-shadow: none;
+}
+
 #center {
   display: flex;
   flex-direction: column;

@@ -55,19 +55,14 @@ const Booking = () => {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-      <button 
-        onClick={() => navigate('/')} 
-        style={{ 
-          marginBottom: '20px', 
-          padding: '8px 16px', 
-          cursor: 'pointer', 
-          border: '1px solid #ccc', 
-          borderRadius: '4px',
-          backgroundColor: '#fff'
-        }}
+    <div className="booking-page">
+      <button
+        type="button"
+        className="floating-back"
+        onClick={() => navigate('/')}
+        aria-label="Назад до списку"
       >
-        ← Назад до списку
+        ← Назад
       </button>
 
       <h2 style={{ marginBottom: '24px' }}>Бронювання квитків на потяг {trainId}</h2>

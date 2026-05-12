@@ -1,16 +1,31 @@
 :root {
+  /* Palette */
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #0f1724; /* darker base to emphasize dark theme by default */
+  --bg-gradient: linear-gradient(135deg, #071026 0%, #0b2139 50%, #0f3050 100%);
+  --surface: #ffffff; /* light surface (cards, panels) */
+  --muted: #6b6375;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
+  --primary: var(--accent);
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* Semantic colors */
+  --primary-contrast: #ffffff;
+  --success: #28a745;
+  --danger: #dc3545;
+  --input-bg: #0b0f14;
+  --input-border: #2e303a;
+  --btn-disabled-bg: #6c757d;
+  --card-shadow: 0 8px 30px rgba(2,6,23,0.14);
+
+  /* Typography */
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -19,7 +34,9 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,17 +49,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #cfd8e3;
     --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
+    --bg: #0b0c10;
+    --bg-gradient: linear-gradient(135deg, #02040a 0%, #071526 40%, #07233b 100%);
+    --surface: #0f1724;
+    --muted: #9ca3af;
+    --border: #1f2430;
+    --code-bg: #0f1114;
     --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
+    --primary: var(--accent);
+    --accent-bg: rgba(192, 132, 252, 0.12);
+    --accent-border: rgba(192, 132, 252, 0.35);
+    --social-bg: rgba(24, 26, 32, 0.45);
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.6) 0 10px 20px -5px, rgba(0, 0, 0, 0.4) 0 6px 8px -4px;
+    --card-shadow: 0 10px 30px rgba(2,6,23,0.55);
+    --primary-contrast: #ffffff;
+    --success: #34d399;
+    --danger: #f87171;
+    --input-bg: #0b0f14;
+    --input-border: #2e303a;
+    --btn-disabled-bg: #374151;
   }
 
   #social .button-icon {
@@ -55,8 +83,8 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1126px;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
