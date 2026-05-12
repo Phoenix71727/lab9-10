@@ -1,0 +1,41 @@
+.wagon-selector {
+  margin-bottom: 24px;
+}
+
+.wagon-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wagon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wagon-btn:hover {
+  border-color: #007bff;
+}
+
+.wagon-btn.active {
+  border-color: #007bff;
+  background-color: #e6f2ff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.wagon-number {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.wagon-type {
+  font-size: 12px;
+  color: #555;
+}

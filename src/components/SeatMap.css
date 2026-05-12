@@ -1,0 +1,66 @@
+.seat-map-container {
+  margin-bottom: 24px;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 місця в ряду */
+  gap: 10px;
+  max-width: 300px; /* Ширина "вагону" */
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.seat {
+  width: 100%;
+  aspect-ratio: 1; /* Робить кнопки квадратними */
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.seat:active {
+  transform: scale(0.95);
+}
+
+/* Кольорова індикація */
+.seat.free { background-color: #28a745; } /* Зелений */
+.seat.free:hover { opacity: 0.8; }
+
+.seat.selected { background-color: #007bff; } /* Синій */
+
+.seat.booked { 
+  background-color: #dc3545; /* Червоний */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Легенда кольорів */
+.seat-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.free-box { background-color: #28a745; }
+.selected-box { background-color: #007bff; }
+.booked-box { background-color: #dc3545; }
